@@ -1,0 +1,18 @@
+services:
+  ytmusic-dl:
+    build: ./
+    env_file: .env
+    volumes:
+      - ./py:/app
+      - ./.env:/app/.env
+      - /mnt/omv/storage/music/audio/org/:/music
+      - /mnt/omv/storage/users/emma/music/:/emma_music
+    depends_on:
+      - bgutil-provider
+    networks:
+      - caddy_network
+    user: "1000:1000"
+    command: python dl.py
+networks:
+  caddy_network:
+    external: true

@@ -1,0 +1,19 @@
+# Core downloader
+yt-dlp[default]                 # [default] pulls in yt-dlp-ejs (EJS challenge scripts)
+bgutil-ytdlp-pot-provider       # PO token plugin — talks to the bgutil HTTP server
+
+# Audio tagging
+mutagen
+
+# MusicBrainz metadata enrichment
+musicbrainzngs
+requests
+
+# .env support
+python-dotenv
+
+# Cover art crop
+Pillow
+
+# Dupes
+rapidfuzz

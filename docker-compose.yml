@@ -1,0 +1,9 @@
+services:
+  bgutil-provider:
+    image: brainicism/bgutil-ytdlp-pot-provider
+    restart: unless-stopped
+    networks:
+      - caddy_network
+networks:
+  caddy_network:
+    external: true
